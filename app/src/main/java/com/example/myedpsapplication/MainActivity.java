@@ -7,7 +7,8 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     int x = 5;
     if(x > 0){
-        System.out.println("Windowsからテスト");
+        System.out.println("Windowsからテスト ori");
+        System.out.println("Macからテスト ori");
     }
 
     @Override
