@@ -7,7 +7,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     int x = 5;
     if(x > 0){
-        System.out.println("おっぱっぴー");
+        System.out.println("Windowsからテスト");
     }
 
     @Override
