@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ログを使用してメッセージを出力
+        // ログを使用してメッセージを出力　消していい
         Log.d("MainActivity", "Windowsからテスト  ori");
         Log.d("MainActivity", "Macからテスト  ori");
         Log.d("MainActivity", "Macからテスト  tupi");
+
+        //ここにプログラムを書いていくみたい
     }
 }
