@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
     if(x > 0){
         System.out.println("Windowsからテスト  ori");
         System.out.println("Macからテスト  ori");
+        System.out.println("Macからテスト  tupi");
     }
 
     @Override
