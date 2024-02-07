@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453604025628",
+    "project_id": "eatanimal-64349",
+    "storage_bucket": "eatanimal-64349.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453604025628:android:8fecbc867af6311ae486d9",
+        "android_client_info": {
+          "package_name": "com.example.myedpsapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj0gmTh6PI9IGn3s8_FH8r36pYtfEA5jA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
