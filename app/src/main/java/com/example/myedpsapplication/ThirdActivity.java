@@ -2,43 +2,62 @@ package com.example.myedpsapplication;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ThirdActivity extends AppCompatActivity {
 
     private TextView textViewName;
     private TextView textViewAge;
 
+    private DatabaseReference userDbRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.third); // 画面遷移3
+        setContentView(R.layout.third);
 
         textViewName = findViewById(R.id.textViewName);
         textViewAge = findViewById(R.id.textViewAge);
 
-        // Intentから名前を取得して表示
-        String name = getIntent().getStringExtra("userName");
-        // 年齢を取得、もしnullならデフォルト値「1」を使用
-        String age = getIntent().getStringExtra("userAge");
-        if (age == null) {
-            age = "1"; // デフォルト値として「1歳」とする
-        }
+        // Firebase Realtime Databaseの参照を取得
+        userDbRef = FirebaseDatabase.getInstance().getReference().child("Users");
 
-        // 名前がnullでないことを確認
-        if (name != null) {
-            updateNameAndAge(name, age);
-        } else {
-            // ここでエラーメッセージを表示するなどの処理を行います。
-            // 例: Toast.makeText(this, "名前のデータがありません。", Toast.LENGTH_LONG).show();
-        }
-    }
+        // IntentからuserIdを取得
+        String userId = getIntent().getStringExtra("USER_ID");
 
-    // 名前と年齢を更新するプライベートメソッド
-    private void updateNameAndAge(String name, String age) {
-        textViewName.setText(name);
-        textViewAge.setText(String.format("%s歳", age));
+        // userIdを使ってFirebase Realtime Databaseから名前と年齢を取得
+        userDbRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // データが存在する場合、名前と年齢を取得して表示
+                    Users user = dataSnapshot.getValue(Users.class);
+                    String name = user.getName();
+                    String age = user.getAge();
+                    textViewName.setText(name);
+                    textViewAge.setText(String.format("%s歳", age));
+                } else {
+                    // データが存在しない場合、エラーメッセージを表示などの処理を行う
+                    textViewName.setText("名前が見つかりません");
+                    textViewAge.setText("年齢が見つかりません");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // エラー処理
+                textViewName.setText("エラー: " + databaseError.getMessage());
+                textViewAge.setText("エラー: " + databaseError.getMessage());
+            }
+        });
     }
 }
+
 
 
