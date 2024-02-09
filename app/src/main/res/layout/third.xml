@@ -11,8 +11,8 @@
         android:layout_height="284dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="117dp"
-        android:src="@drawable/baby"
-        android:contentDescription="@string/risu" />
+        android:contentDescription="@string/risu"
+        android:src="@drawable/baby" />
 
     <View
         android:id="@+id/rectangle_2"

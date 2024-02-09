@@ -91,5 +91,20 @@
         android:textSize="24sp"
         tools:ignore="HardcodedText" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="218dp"
+        app:srcCompat="@drawable/baby2"
+        android:contentDescription="@string/baby2" />
+
 
 </RelativeLayout>
