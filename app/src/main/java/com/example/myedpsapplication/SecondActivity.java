@@ -47,16 +47,16 @@ public class SecondActivity extends AppCompatActivity {
     // データベースにユーザーが追加された後、ThirdActivityに遷移する
     private void insertUserData() {
         String name = etName.getText().toString();
-        Users users = new Users(name);
+        Users users = new Users(name, "1");
 
         String userId = userDbRef.push().getKey();
         userDbRef.child(userId).setValue(users)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         // データベース挿入成功時にThirdActivityへ遷移
-                        Intent secondToThirdIntent = new Intent(SecondActivity.this, ThirdActivity.class);
-                        secondToThirdIntent.putExtra("userName", name); // 名前を渡す
-                        startActivity(secondToThirdIntent);
+                        Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                        intent.putExtra("USER_ID", userId);
+                        startActivity(intent);
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
                         finish(); // SecondActivityを終了させる
                     } else {
