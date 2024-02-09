@@ -5,4 +5,18 @@
     <string name="リスくん" />
     <string name="決定">決定</string>
     <string name="名前のパートナーに名前をつけてあげよう">名前のパートナーに名前をつけてあげよう</string>
+    <string name="具材を撮影してください" />
+    <string name="注意">注意</string>
+    <string name="具材全体が映るようにしてください">具材全体が映るようにしてください</string>
+    <string name="具材以外は映らないようにしてください">具材以外は映らないようにしてください</string>
+    <string name="料理">料理</string>
+    <string name="作りたい料理を選択してください">作りたい料理を選択してください</string>
+    <string name="料理手順">料理手順</string>
+    <string name="料理を撮影してください">料理を撮影してください</string>
+    <string name="料理全体が映るようにしてください">料理全体が映るようにしてください</string>
+    <string name="料理以外は映らないようにしてください">料理以外は映らないようにしてください</string>
+    <string name="料理の完成度は">料理の完成度は？</string>
+    <string name="small">small</string>
+    <string name="small2">small2</string>
+    <string name="よくできました">よくできました！</string>
 </resources>
