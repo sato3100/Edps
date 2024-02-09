@@ -5,4 +5,11 @@
     <string name="リスくん" />
     <string name="決定">決定</string>
     <string name="名前のパートナーに名前をつけてあげよう">名前のパートナーに名前をつけてあげよう</string>
+    <string name="パートナーに名前をつけてあげよう">パートナーに名前をつけてあげよう</string>
+    <string name="animal" />
+    <string name="fork" />
+    <string name="料理を始めよう">料理を始めよう</string>
+    <string name="todo">TODO</string>
+    <string name="決定２">決定</string>
+    <string name="リスちゃん">リスくん</string>
 </resources>
