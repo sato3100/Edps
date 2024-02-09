@@ -11,7 +11,8 @@
         android:layout_height="284dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="117dp"
-        android:src="@drawable/baby" />
+        android:src="@drawable/baby"
+        android:contentDescription="@string/risu" />
 
     <View
         android:id="@+id/rectangle_2"
@@ -30,7 +31,7 @@
         android:layout_alignStart="@id/rectangle_2"
         android:layout_alignTop="@id/rectangle_2"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="123dp"
         android:layout_marginTop="10dp"
         android:elevation="5dp"
         android:textColor="#000000"
@@ -42,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/rectangle_2"
-        android:layout_marginStart="-192dp"
+        android:layout_marginStart="-176dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@id/textViewName"
         android:elevation="5dp"
@@ -53,27 +54,28 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="646dp"
+        android:layout_marginTop="666dp"
         android:layout_marginBottom="0dp"
         android:background="#E6F3F3F3"
         android:hapticFeedbackEnabled="true" />
 
+
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="78dp"
-        android:layout_height="72dp"
+        android:layout_width="69dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="51dp"
-        android:layout_marginBottom="6dp"
-        app:srcCompat="@drawable/cooking"
-        android:contentDescription="@string/todo" />
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="-1dp"
+        android:contentDescription="@string/home_button_description"
+        app:srcCompat="@drawable/cooking" />
 
     <TextView
         android:id="@+id/textView2"
@@ -83,10 +85,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="151dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="23dp"
-        android:text="@string/料理を始めよう"
-        android:textSize="24sp" />
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="13dp"
+        android:text="料理を始めよう"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
 
 
 </RelativeLayout>

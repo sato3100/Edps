@@ -5,15 +5,7 @@
     <string name="リスくん" />
     <string name="決定">決定</string>
     <string name="名前のパートナーに名前をつけてあげよう">名前のパートナーに名前をつけてあげよう</string>
-<<<<<<< HEAD
-    <string name="パートナーに名前をつけてあげよう">パートナーに名前をつけてあげよう</string>
-    <string name="animal" />
-    <string name="fork" />
-    <string name="料理を始めよう">料理を始めよう</string>
-    <string name="todo">TODO</string>
-    <string name="決定２">決定</string>
-    <string name="リスちゃん">リスくん</string>
-=======
+
     <string name="具材を撮影してください" />
     <string name="注意">注意</string>
     <string name="具材全体が映るようにしてください">具材全体が映るようにしてください</string>
@@ -28,5 +20,10 @@
     <string name="small">small</string>
     <string name="small2">small2</string>
     <string name="よくできました">よくできました！</string>
->>>>>>> origin/master
+    <string name="パートナーに名前をつけてあげよう" />
+    <string name="リスちゃん" />
+    <string name="todo" />
+    <string name="料理を始めよう" />
+    <string name="home_button_description">ホームに戻る</string>
+    <string name="risu">risu</string>
 </resources>
