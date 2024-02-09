@@ -3,14 +3,29 @@ package com.example.myedpsapplication;
 import java.util.List;
 
 public class RecipeResponse {
-    // このクラスはAPIのレスポンス構造に合わせて定義してください。
-    // 以下は一例です。
-    public List<Recipe> result;
+    private List<Recipe> result;
+
+    public List<Recipe> getResult() {
+        return result; // Return the actual result
+    }
 
     public static class Recipe {
-        public String recipeTitle;
-        public String foodImageUrl;
-        public String recipeUrl;
-        // 必要に応じて他のフィールドを追加
+        private String recipeTitle;
+        private String foodImageUrl;
+        // Add the getter for recipeUrl if you're using it
+        private String recipeUrl;
+
+        public String getRecipeTitle() {
+            return recipeTitle; // Return the actual title
+        }
+
+        public String getFoodImageUrl() {
+            return foodImageUrl; // Return the actual image URL
+        }
+
+        // Getter for recipeUrl
+        public String getRecipeUrl() {
+            return recipeUrl;
+        }
     }
 }
