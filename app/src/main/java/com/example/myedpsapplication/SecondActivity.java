@@ -42,18 +42,29 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     //データベースにユーザーが追加される関数
-    private void insertUserData(){
 
+
+    // データベースにユーザーが追加された後、ThirdActivityに遷移する
+    private void insertUserData() {
         String name = etName.getText().toString();
-
         Users users = new Users(name);
 
         String userId = userDbRef.push().getKey();
-        assert userId != null;
-        userDbRef.child(userId).setValue(users);
-
-        Toast.makeText(SecondActivity.this,"名前が決まりました！",Toast.LENGTH_SHORT).show();
-
+        userDbRef.child(userId).setValue(users)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // データベース挿入成功時にThirdActivityへ遷移
+                        Intent secondToThirdIntent = new Intent(SecondActivity.this, ThirdActivity.class);
+                        secondToThirdIntent.putExtra("userName", name); // 名前を渡す
+                        startActivity(secondToThirdIntent);
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                        finish(); // SecondActivityを終了させる
+                    } else {
+                        // エラーが発生した場合
+                        Toast.makeText(SecondActivity.this, "データベースに挿入ができていない。", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
+
 
 }

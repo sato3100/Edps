@@ -6,8 +6,6 @@
     android:background="@color/white"
     android:padding="16dp">
 
-
-
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
