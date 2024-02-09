@@ -32,7 +32,9 @@
         <activity android:name=".ThirdActivity">
 
         </activity>
+        <activity android:name=".CameraActivity">
 
+        </activity>
 
     </application>
 
