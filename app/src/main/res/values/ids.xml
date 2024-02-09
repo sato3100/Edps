@@ -2,4 +2,7 @@
 <resources>
     <item name="textViewName" type="id" />
     <item name="textViewAge" type="id" />
+    <item name="character_image" type="id" />
+    <item name="backgroundRectangle" type="id" />
+    <item name="rectangle_2" type="id" />
 </resources>

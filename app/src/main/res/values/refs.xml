@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <drawable name="rounded_rectangle" />
+    <drawable name="circle_shape" />
+    <drawable name="rectangle2" />
 </resources>

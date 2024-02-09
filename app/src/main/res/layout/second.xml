@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="パートナーに名前をつけてあげよう"
+        android:text="@string/パートナーに名前をつけてあげよう"
         android:textSize="20sp" />
 
     <ImageView
@@ -22,23 +22,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="39dp"
-        android:src="@drawable/downr" />
+        android:src="@drawable/baby2" />
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="リスくん"
+        android:hint="@string/リスちゃん"
         android:imeOptions="actionDone"
         android:inputType="text"
         android:layout_below="@id/imageViewCharacter"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="決定"
+        android:text="@string/決定"
         android:layout_below="@id/editTextName"
         android:layout_marginTop="24dp" />
 
