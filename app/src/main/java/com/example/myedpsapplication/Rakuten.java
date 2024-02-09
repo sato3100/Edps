@@ -5,6 +5,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,36 +36,41 @@ public class Rakuten extends AppCompatActivity {
 
             RakutenRecipeApi api = retrofit.create(RakutenRecipeApi.class);
 
-            Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, "10"); // カテゴリIDを設定
+            Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, "20"); // カテゴリIDを設定
 
             call.enqueue(new Callback<RecipeResponse>() {
                 @Override
                 public void onResponse(Call<RecipeResponse> call, Response<RecipeResponse> response) {
                     TextView t = findViewById(R.id.textView4);
 
-
-
-
                     if (response.isSuccessful()) {
                         // レスポンスを処理
                         RecipeResponse recipeResponse = response.body();
-                        // ここでレシピ情報をUIに表示
 
-                        t.setText(recipeResponse.toString());
-                        
+                        // レシピ情報を取得
+                        List<RecipeResponse.Recipe> recipes = recipeResponse.getResult();
 
+                        // UIに表示
+                        StringBuilder stringBuilder = new StringBuilder();
+                        for (RecipeResponse.Recipe recipe : recipes) {
+                            stringBuilder.append("レシピ名: ").append(recipe.getRecipeTitle()).append("\n");
+                            stringBuilder.append("画像URL: ").append(recipe.getFoodImageUrl()).append("\n");
+                            stringBuilder.append("-----------------------------------\n");
+                        }
+                        t.setText(stringBuilder.toString());
 
-                    }else{
-                       // t.setText("エラーはないけどなんかうまくいってない");
-                        t.setText(response.toString());
+                    } else {
+                        // エラー処理
+                        t.setText("エラーが発生しました。");
                     }
                 }
+
 
                 @Override
                 public void onFailure(Call<RecipeResponse> call, Throwable t) {
                     // エラー処理
                     TextView t2 = findViewById(R.id.textView4);
-                    t2.setText("エラった");
+                    t2.setText("ヘラった");
                 }
             });
         }catch (Exception e){
@@ -72,5 +79,7 @@ public class Rakuten extends AppCompatActivity {
         }
 
 
+
     }
+
 }
