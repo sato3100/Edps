@@ -36,6 +36,12 @@
         <activity android:name=".CameraActivity">
 
         </activity>
+        <activity android:name=".Rakuten">
+        </activity>
+        <activity android:name=".RakutenRecipeApi">
+        </activity>
+        <activity android:name=".RecipeResponse">
+        </activity>
 
 
     </application>
