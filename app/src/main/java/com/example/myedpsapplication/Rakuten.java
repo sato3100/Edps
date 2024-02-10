@@ -4,14 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.bumptech.glide.Glide;
-
 import java.util.List;
 import java.util.Random;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -19,7 +15,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Rakuten extends AppCompatActivity {
-
     private final String BASE_URL = "https://app.rakuten.co.jp/services/api/";
     private final String APPLICATION_ID = "1087356199907491193"; // あなたのAPIキー
 
@@ -36,7 +31,7 @@ public class Rakuten extends AppCompatActivity {
         RakutenRecipeApi api = retrofit.create(RakutenRecipeApi.class);
 
         Random rand = new Random();
-        int randomNumber = rand.nextInt(29)+5; // 0から99までのランダムな数字
+        int randomNumber = rand.nextInt(30)+1; // 1から30までのランダムな数字
         System.out.println("生成されたランダムな数字: " + randomNumber);
 
         Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, String.valueOf(randomNumber)); // カテゴリIDを設定
@@ -53,8 +48,11 @@ public class Rakuten extends AppCompatActivity {
                         int recipeTextViewID = getResources().getIdentifier("textViewRecipe" + (i + 1), "id", getPackageName());
                         int recipeImageViewID = getResources().getIdentifier("imageViewRecipe" + (i + 1), "id", getPackageName());
 
+
                         TextView recipeTextView = findViewById(recipeTextViewID);
                         ImageView recipeImageView = findViewById(recipeImageViewID);
+
+
 
                         if (recipeTextView != null) {
                             recipeTextView.setText(recipe.getRecipeTitle());
@@ -64,6 +62,13 @@ public class Rakuten extends AppCompatActivity {
                             Glide.with(Rakuten.this).load(recipe.getFoodImageUrl()).into(recipeImageView);
                         }
                     }
+
+
+
+                    // URLをインテントで次のアクティビティに渡す
+                    Intent intent = new Intent(Rakuten.this, SixthActivity.class);
+                    intent.putExtra("RECIPE_URL", recipeUrl);
+                    startActivity(intent);
                 } else {
                     showError("レシピ情報の取得に失敗してる");
                 }
@@ -77,7 +82,15 @@ public class Rakuten extends AppCompatActivity {
 
         findViewById(R.id.readyButton).setOnClickListener(v -> {
             Intent intent = new Intent(Rakuten.this, SixthActivity.class);
+
+//---------------
+            RecipeResponse.Recipe recipe = response.body().getResult().get(0); // 最初のレシピになってるから、たっぷしたレシピにできれば。
+            String recipeUrl = recipe.getRecipeUrl(); // レシピのURLを取得
+            intent.putExtra("RECIPE_URL", selectedRecipeUrl);
             startActivity(intent);
+
+            //--------------
+
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
 

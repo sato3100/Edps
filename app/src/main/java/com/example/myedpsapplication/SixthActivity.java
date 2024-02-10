@@ -6,6 +6,7 @@ import android.media.TimedText;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,6 +57,12 @@ public class SixthActivity extends AppCompatActivity {
                 findViewById(R.id.cookFinishButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
                     @Override
                     public void onClick(View v) {
+
+                        WebView webView = findViewById(R.id.webview); // XML で定義した WebView の ID
+                        String recipeUrl = getIntent().getStringExtra("RECIPE_URL");
+
+                        webView.getSettings().setJavaScriptEnabled(true); // 必要に応じて JavaScript を有効にする
+                        webView.loadUrl(recipeUrl);
 
                         int time = h*3600+m*60+s;//画面遷移で渡したいデータ
 

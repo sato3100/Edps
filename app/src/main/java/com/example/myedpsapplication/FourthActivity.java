@@ -38,9 +38,6 @@ public class FourthActivity extends AppCompatActivity {
             }
         });
 
-
-
-
     }
 }
 
