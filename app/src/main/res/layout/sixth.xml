@@ -6,13 +6,29 @@
     android:layout_height="match_parent">
 
 
-    <View
-        android:id="@+id/view"
+    <Button
+        android:id="@+id/readyButton"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="93dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#1D47C5"
+        android:text="準備完了"
+        android:textColorHighlight="#2355D3"
+        android:textColorLink="#4272C3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.884" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="423dp"
+        android:layout_height="248dp"
         android:background="#D2F7BC"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layerType="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -21,38 +37,56 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
         android:text="@string/料理"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="17dp"
-        android:layout_marginBottom="106dp"
+        android:layout_marginBottom="497dp"
         android:text="@string/作りたい料理を選択してください"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/ingredientBackButton" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="300dp"
-        android:layout_height="323dp"
+        android:layout_width="298dp"
+        android:layout_height="0dp"
         android:layout_marginStart="55dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="292dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ImageView
+        android:id="@+id/ingredientBackButton"
+        android:layout_width="51dp"
+        android:layout_height="0dp"
+        android:layout_above="@id/view2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="125dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

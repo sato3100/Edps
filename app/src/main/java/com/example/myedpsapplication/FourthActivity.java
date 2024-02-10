@@ -29,7 +29,7 @@ public class FourthActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent FourthToFifthIntent = new Intent(FourthActivity.this, FifthActivity.class);
+                Intent FourthToFifthIntent = new Intent(FourthActivity.this, Rakuten.class);
                 // 名前を渡す
                 startActivity(FourthToFifthIntent);
 

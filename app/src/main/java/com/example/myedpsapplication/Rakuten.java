@@ -1,9 +1,14 @@
 package com.example.myedpsapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -50,6 +55,23 @@ public class Rakuten extends AppCompatActivity {
                         // レシピ情報を取得
                         List<RecipeResponse.Recipe> recipes = recipeResponse.getResult();
 
+                        for (int i= 0; i < recipes.size(); i++) {
+                            RecipeResponse.Recipe recipe = recipes.get(i);
+
+                            // sixth.xmlから拾ってきてる
+                            TextView recipeTextView = findViewById(getResources().getIdentifier("textViewRecipe" + (i + 1), "id", getPackageName()));
+                            recipeTextView.setText(recipe.getRecipeTitle());
+
+                            // 上と同じくで、画像出るはず
+                            ImageView recipeImageView = findViewById(getResources().getIdentifier("imageViewRecipe" + (i + 1), "id", getPackageName()));
+
+                            // Glideを使用して画像をロード
+                            Glide.with(Rakuten.this)
+                                    .load(recipe.getFoodImageUrl())
+                                    .into(recipeImageView);
+                        }
+
+
                         // UIに表示
                         StringBuilder stringBuilder = new StringBuilder();
                         for (RecipeResponse.Recipe recipe : recipes) {
@@ -77,6 +99,36 @@ public class Rakuten extends AppCompatActivity {
             TextView t = findViewById(R.id.textView4);
             t.setText(e.toString());
         }
+
+
+            findViewById(R.id.readyButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
+                @Override
+                public void onClick(View v) {
+
+                    Intent FifthToSixthIntent = new Intent(Rakuten.this, SixthActivity.class);
+                    // 名前を渡す
+                    startActivity(FifthToSixthIntent);
+
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                    finish(); // FifthActivityを終了させる
+
+                }
+            });
+
+            findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent FifthToFourthIntent = new Intent(Rakuten.this, FourthActivity.class);
+                    // 名前を渡す
+                    startActivity(FifthToFourthIntent);
+
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                    finish(); // FifthActivityを終了させる
+                }
+            });
+
+
+
 
 
 

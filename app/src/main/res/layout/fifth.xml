@@ -9,9 +9,7 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="143dp"
+        android:layout_marginBottom="44dp"
         android:background="#D2F7BC"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,18 +21,17 @@
         android:id="@+id/textView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="168dp"
         android:text="@string/具材を撮影してください"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/ingredientButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
         tools:ignore="MissingConstraints"
-        tools:text="家にある具材を入力して下さい"
-        tools:visibility="visible" />
+        tools:text="家にある具材を入力して下さい" />
 
     <TextView
         android:id="@+id/textView9"
@@ -47,16 +44,14 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ingredientButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="74dp"
         android:backgroundTint="#1D47C5"
         android:text="準備完了"
         android:textColorHighlight="#2355D3"
@@ -64,19 +59,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:rippleColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/homeBackButton"
-        android:layout_width="55dp"
+        android:layout_width="56dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="166dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.031"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
