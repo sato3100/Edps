@@ -59,7 +59,8 @@ public class SixthActivity extends AppCompatActivity {
 
                         int time = h*3600+m*60+s;//画面遷移で渡したいデータ
 
-
+                        Intent SixthToSeventhIntent = new Intent(SixthActivity.this, SeventhActivity.class);
+                        SixthToSeventhIntent.putExtra("time", time);
 
                         Intent SixthToCameraIntent = new Intent(SixthActivity.this, CameraActivity.class);
                         // 名前を渡す

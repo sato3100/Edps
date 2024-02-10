@@ -18,6 +18,7 @@ public class SeventhActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tenth);
 
+        String time = getIntent().getStringExtra("time");
        // int timeScore=getTimeValue;
 
     //    TextView ScoreText = findViewById(R.id.evaluationText);
