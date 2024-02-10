@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="パートナーに名前をつけてあげよう"
+        android:text="@string/パートナーに名前をつけてあげよう2"
         android:textSize="20sp" />
 
     <ImageView
@@ -22,7 +22,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="39dp"
-        android:src="@drawable/baby2" />
+        android:src="@drawable/baby2"
+        android:contentDescription="@string/baby" />
 
     <EditText
         android:id="@+id/editTextName"
@@ -31,7 +32,7 @@
         android:layout_below="@id/imageViewCharacter"
         android:layout_marginTop="2dp"
         android:autofillHints=""
-        android:hint="リスちゃん"
+        android:hint="@string/リスちゃん2"
         android:imeOptions="actionDone"
         android:inputType="text" />
 
