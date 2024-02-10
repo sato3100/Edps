@@ -7,4 +7,7 @@ import retrofit2.http.Query;
 public interface RakutenRecipeApi {
     @GET("Recipe/CategoryRanking/20170426")
     Call<RecipeResponse> getRecipes(@Query("applicationId") String appId, @Query("categoryId") String categoryId);
+
+    Call<RecipeResponse> getRecipesByIngredient(String applicationId, String ingredient, String number);
 }
+
