@@ -29,11 +29,10 @@
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/rectangle_2"
-        android:layout_alignTop="@id/rectangle_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="10dp"
+        android:layout_alignStart="@id/textViewAge"
+        android:layout_alignTop="@id/textViewAge"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="2dp"
         android:elevation="5dp"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -44,26 +43,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/rectangle_2"
-        android:layout_marginStart="-176dp"
-        android:layout_marginTop="10dp"
-        android:layout_toEndOf="@id/textViewName"
+        android:layout_alignEnd="@id/rectangle_2"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="255dp"
         android:elevation="5dp"
         android:textColor="#000000"
         android:textSize="24sp"
         tools:text="10歳" />
 
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="666dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginBottom="3dp"
         android:background="#E6F3F3F3"
         android:hapticFeedbackEnabled="true" />
+
+
 
 
 
@@ -71,15 +73,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/view"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="-4dp"
         android:text="料理を始めよう"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText" />
+        android:textSize="26sp" />
 
     <TextView
         android:id="@+id/textView13"
@@ -87,16 +87,14 @@
         android:layout_height="wrap_content"
          />
 
+
     <ImageView
         android:id="@+id/dishesButton"
-        android:layout_width="68dp"
-        android:layout_height="53dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="681dp"
-        android:layout_marginBottom="-3dp"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_alignTop="@id/view"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="27dp"
         app:srcCompat="@drawable/cookingicon" />
 
 
