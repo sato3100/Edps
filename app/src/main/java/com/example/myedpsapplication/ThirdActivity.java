@@ -1,8 +1,11 @@
 package com.example.myedpsapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ThemedSpinnerAdapter;
@@ -22,7 +25,6 @@ public class ThirdActivity extends AppCompatActivity {
     private TextView textViewAge;
 
     private DatabaseReference userDbRef;
-    int petAnimation=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,28 +33,36 @@ public class ThirdActivity extends AppCompatActivity {
 
         findViewById(R.id.character_image).setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                long startTime = System.currentTimeMillis();
-                long endTime;
+            public void onClick(View v) {//リスクリック時の処理
                 ImageView petImage = findViewById(R.id.character_image);
                 petImage.setImageResource(R.drawable.baby2);
+                new Handler().postDelayed(count,1000);//1000ミリ秒（1秒)後に元の状態に戻す
 
-
-
-                for(int i=0;;i++){
-                    endTime=System.currentTimeMillis();
-                    if(endTime-startTime==1000){
-                        petImage.setImageResource(R.drawable.baby);
-                        break;
-                    }
+            }
+            private final Runnable count = new Runnable() {//元の状態に戻す処理
+                @Override
+                public void run() {
+                    ImageView petImage = findViewById(R.id.character_image);
+                    petImage.setImageResource(R.drawable.baby);
                 }
+            };
+        });
+
+        findViewById(R.id.dishesButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
+            @Override
+            public void onClick(View v) {
+
+                Intent ThirdToFourthIntent = new Intent(ThirdActivity.this, FourthActivity.class);
+                 // 名前を渡す
+                startActivity(ThirdToFourthIntent);
+
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                finish(); // ThirdActivityを終了させる
 
             }
         });
 
-        try{
-
+        try{//ここでエラーが起きてる 修正終わったらtrycatch文は削除してOK
             textViewName = findViewById(R.id.textViewName);
             textViewAge = findViewById(R.id.textViewAge);
 

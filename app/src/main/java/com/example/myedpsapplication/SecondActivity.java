@@ -55,7 +55,7 @@ public class SecondActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // データベース挿入成功時にThirdActivityへ遷移
 
-                        Intent secondToThirdIntent = new Intent(SecondActivity.this, ThirdActivity.class);//一時的にカメラに遷移するよう変更しています
+                        Intent secondToThirdIntent = new Intent(SecondActivity.this, ThirdActivity.class);
                         secondToThirdIntent.putExtra("userName", name); // 名前を渡す
                         startActivity(secondToThirdIntent);
 
