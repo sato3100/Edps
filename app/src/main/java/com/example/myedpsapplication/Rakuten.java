@@ -108,22 +108,18 @@ public class Rakuten extends AppCompatActivity {
                     Intent FifthToSixthIntent = new Intent(Rakuten.this, SixthActivity.class);
                     // 名前を渡す
                     startActivity(FifthToSixthIntent);
-
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                    finish(); // FifthActivityを終了させる
-
                 }
             });
 
             findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent FifthToFourthIntent = new Intent(Rakuten.this, FourthActivity.class);
-                    // 名前を渡す
-                    startActivity(FifthToFourthIntent);
+                    Intent intent = new Intent(Rakuten.this, FourthActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(intent);
 
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                    finish(); // FifthActivityを終了させる
                 }
             });
 
