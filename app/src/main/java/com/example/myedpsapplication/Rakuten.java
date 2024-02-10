@@ -33,100 +33,98 @@ public class Rakuten extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sixth);
-        try{
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
 
-            RakutenRecipeApi api = retrofit.create(RakutenRecipeApi.class);
+        //try{
+        //    Retrofit retrofit = new Retrofit.Builder()
+         //           .baseUrl(BASE_URL)
+        //            .addConverterFactory(GsonConverterFactory.create())
+        //            .build();
 
-            Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, "20"); // カテゴリIDを設定
+        //    RakutenRecipeApi api = retrofit.create(RakutenRecipeApi.class);
 
-            call.enqueue(new Callback<RecipeResponse>() {
-                @Override
-                public void onResponse(Call<RecipeResponse> call, Response<RecipeResponse> response) {
-                    TextView t = findViewById(R.id.textView4);
+        //    Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, "20"); // カテゴリIDを設定
 
-                    if (response.isSuccessful()) {
+          //  call.enqueue(new Callback<RecipeResponse>() {
+            //      @Override
+            //    public void onResponse(Call<RecipeResponse> call, Response<RecipeResponse> response) {
+            //        //TextView t = findViewById(R.id.textViewRecipe1);
+
+            //        if (response.isSuccessful()) {
                         // レスポンスを処理
-                        RecipeResponse recipeResponse = response.body();
+            //            RecipeResponse recipeResponse = response.body();
 
                         // レシピ情報を取得
-                        List<RecipeResponse.Recipe> recipes = recipeResponse.getResult();
+            //            List<RecipeResponse.Recipe> recipes = recipeResponse.getResult();
 
-                        for (int i= 0; i < recipes.size(); i++) {
-                            RecipeResponse.Recipe recipe = recipes.get(i);
+            //            for (int i= 0; i < recipes.size(); i++) {
+            //                RecipeResponse.Recipe recipe = recipes.get(i);
 
                             // sixth.xmlから拾ってきてる
-                            TextView recipeTextView = findViewById(getResources().getIdentifier("textViewRecipe" + (i + 1), "id", getPackageName()));
-                            recipeTextView.setText(recipe.getRecipeTitle());
+            //                TextView recipeTextView = findViewById(getResources().getIdentifier("textViewRecipe" + (i + 1), "id", getPackageName()));
+            //                recipeTextView.setText(recipe.getRecipeTitle());
 
                             // 上と同じくで、画像出るはず
-                            ImageView recipeImageView = findViewById(getResources().getIdentifier("imageViewRecipe" + (i + 1), "id", getPackageName()));
+             //               ImageView recipeImageView = findViewById(getResources().getIdentifier("imageViewRecipe" + (i + 1), "id", getPackageName()));
 
                             // Glideを使用して画像をロード
-                            Glide.with(Rakuten.this)
-                                    .load(recipe.getFoodImageUrl())
-                                    .into(recipeImageView);
-                        }
+             //               Glide.with(Rakuten.this)
+            //                        .load(recipe.getFoodImageUrl())
+            //                        .into(recipeImageView);
+            //            }
 
 
                         // UIに表示
-                        StringBuilder stringBuilder = new StringBuilder();
-                        for (RecipeResponse.Recipe recipe : recipes) {
-                            stringBuilder.append("レシピ名: ").append(recipe.getRecipeTitle()).append("\n");
-                            stringBuilder.append("画像URL: ").append(recipe.getFoodImageUrl()).append("\n");
-                            stringBuilder.append("-----------------------------------\n");
-                        }
-                        t.setText(stringBuilder.toString());
+           //             StringBuilder stringBuilder = new StringBuilder();
+            //            for (RecipeResponse.Recipe recipe : recipes) {
+            //                stringBuilder.append("レシピ名: ").append(recipe.getRecipeTitle()).append("\n");
+            //                stringBuilder.append("画像URL: ").append(recipe.getFoodImageUrl()).append("\n");
+            //                stringBuilder.append("-----------------------------------\n");
+            //            }
+                      //  t.setText(stringBuilder.toString());
 
-                    } else {
+             //       } else {
                         // エラー処理
-                        t.setText("エラーが発生しました。");
-                    }
-                }
+                       // t.setText("エラーが発生しました。");
+            //        }
+            //    }
 
 
-                @Override
-                public void onFailure(Call<RecipeResponse> call, Throwable t) {
+            //    @Override
+            //    public void onFailure(Call<RecipeResponse> call, Throwable t) {
                     // エラー処理
-                    TextView t2 = findViewById(R.id.textView4);
-                    t2.setText("ヘラった");
-                }
-            });
-        }catch (Exception e){
-            TextView t = findViewById(R.id.textView4);
-            t.setText(e.toString());
-        }
+                 //   TextView t2 = findViewById(R.id.textView4);
+                //    t2.setText("ヘラった");
+            //    }
+            //});
+        //}catch (Exception e){
+
+        //}
 
 
-            findViewById(R.id.readyButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
-                @Override
-                public void onClick(View v) {
 
-                    Intent FifthToSixthIntent = new Intent(Rakuten.this, SixthActivity.class);
-                    // 名前を渡す
-                    startActivity(FifthToSixthIntent);
 
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                    finish(); // FifthActivityを終了させる
+        findViewById(R.id.readyButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
+            @Override
+            public void onClick(View v) {
 
-                }
-            });
+                Intent FifthToSixthIntent = new Intent(Rakuten.this, SixthActivity.class);
+                // 名前を渡す
+                startActivity(FifthToSixthIntent);
 
-            findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent FifthToFourthIntent = new Intent(Rakuten.this, FourthActivity.class);
-                    // 名前を渡す
-                    startActivity(FifthToFourthIntent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                finish(); // FifthActivityを終了させる
 
-                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                    finish(); // FifthActivityを終了させる
-                }
-            });
+            }
+        });
 
+        findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                finish(); // FifthActivityを終了させる
+            }
+        });
 
 
 

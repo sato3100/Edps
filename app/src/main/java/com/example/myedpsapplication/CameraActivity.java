@@ -80,7 +80,7 @@ public class CameraActivity extends AppCompatActivity{
                 ivCamera.setImageURI(_imageUri);
 
 
-                Intent CameraToSeventhIntent = new Intent(CameraActivity.this, SeventhActivity.class);//一時的にrakutenから変更
+                Intent CameraToSeventhIntent = new Intent(CameraActivity.this, SeventhActivity.class);
                 // 名前を渡す
                 startActivity(CameraToSeventhIntent);
 
