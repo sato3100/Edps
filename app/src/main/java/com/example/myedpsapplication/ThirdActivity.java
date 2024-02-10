@@ -1,6 +1,7 @@
 package com.example.myedpsapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -67,7 +68,8 @@ public class ThirdActivity extends AppCompatActivity {
         userDbRef = FirebaseDatabase.getInstance().getReference().child("Users");
 
         // IntentからuserIdを取得
-        String userId = getIntent().getStringExtra("USER_ID");
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String userId = prefs.getString("userId", null);
 
         // userIdを使ってFirebase Realtime Databaseから名前と年齢を取得
         userDbRef.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
