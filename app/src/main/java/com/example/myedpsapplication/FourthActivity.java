@@ -19,10 +19,22 @@ public class FourthActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //アクティビティスタック上の位置が保持される
+                Intent intent = new Intent(FourthActivity.this, Rakuten.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+            }
+        });
+
+        findViewById(R.id.homeBackButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 Intent intent = new Intent(FourthActivity.this, ThirdActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+
             }
         });
 
