@@ -12,6 +12,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="117dp"
         android:contentDescription="@string/risu"
+        android:onClick="onClickPet"
         android:src="@drawable/baby" />
 
     <View
@@ -90,6 +91,12 @@
         android:text="料理を始めよう"
         android:textSize="24sp"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
 
 
 </RelativeLayout>
