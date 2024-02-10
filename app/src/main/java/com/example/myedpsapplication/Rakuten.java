@@ -65,10 +65,7 @@ public class Rakuten extends AppCompatActivity {
 
 
 
-                    // URLをインテントで次のアクティビティに渡す
-                    Intent intent = new Intent(Rakuten.this, SixthActivity.class);
-                    intent.putExtra("RECIPE_URL", recipeUrl);
-                    startActivity(intent);
+
                 } else {
                     showError("レシピ情報の取得に失敗してる");
                 }
@@ -86,7 +83,7 @@ public class Rakuten extends AppCompatActivity {
 //---------------
             RecipeResponse.Recipe recipe = response.body().getResult().get(0); // 最初のレシピになってるから、たっぷしたレシピにできれば。
             String recipeUrl = recipe.getRecipeUrl(); // レシピのURLを取得
-            intent.putExtra("RECIPE_URL", selectedRecipeUrl);
+            intent.putExtra("RECIPE_URL", recipeUrl);
             startActivity(intent);
 
             //--------------
