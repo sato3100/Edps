@@ -5,4 +5,5 @@
     <item name="character_image" type="id" />
     <item name="backgroundRectangle" type="id" />
     <item name="rectangle_2" type="id" />
+    <item name="textViewTitle" type="id" />
 </resources>
