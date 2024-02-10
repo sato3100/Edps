@@ -78,6 +78,17 @@ public class CameraActivity extends AppCompatActivity{
                 ivCamera.setImageBitmap(bitmap);
                 // フィールドの画像URIをImageViewに設定。
                 ivCamera.setImageURI(_imageUri);
+
+
+                Intent CameraToSeventhIntent = new Intent(CameraActivity.this, SeventhActivity.class);//一時的にrakutenから変更
+                // 名前を渡す
+                startActivity(CameraToSeventhIntent);
+
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                finish(); // CameraActivityを終了させる
+
+
+
             }
         }
     }

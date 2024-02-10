@@ -25,7 +25,7 @@ public class Rakuten extends AppCompatActivity {
    // private final String BASE_URL = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426?applicationId=1087356199907491193";
   //  private  final  String  BASE_URL = "https://app.rakuten.co.jp/services/api/Recipe/CategoryList/20170426/";
    private  final  String  BASE_URL ="https://app.rakuten.co.jp/services/api/";
-    private final String APPLICATION_ID = "1087356199907491193"; // あなたのAPIキーを設定
+   private final String APPLICATION_ID = "1087356199907491193"; // あなたのAPIキーを設定
 
 
 

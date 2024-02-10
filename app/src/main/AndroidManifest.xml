@@ -34,6 +34,8 @@
         </activity>
         <activity android:name=".FourthActivity">
         </activity>
+        <activity android:name=".SixthActivity">
+        </activity>
         <activity android:name=".CameraActivity">
         </activity>
         <activity android:name=".Rakuten">

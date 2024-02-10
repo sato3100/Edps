@@ -6,13 +6,28 @@
     android:layout_height="match_parent">
 
 
+    <Button
+        android:id="@+id/eatStartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#1D47C5"
+        android:text="食べる"
+        android:textColorHighlight="#2355D3"
+        android:textColorLink="#4272C3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FFFFFF" />
+
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="96dp"
         android:background="#D2F7BC"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -53,13 +68,16 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="287dp"
+        android:layout_width="0dp"
         android:layout_height="282dp"
+        android:layout_marginStart="62dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="62dp"
+        android:contentDescription="@string/baby3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/baby2"
-        tools:layout_editor_absoluteX="62dp"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/baby3" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

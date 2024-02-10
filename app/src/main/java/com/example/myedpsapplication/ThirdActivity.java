@@ -57,7 +57,7 @@ public class ThirdActivity extends AppCompatActivity {
                 startActivity(ThirdToFourthIntent);
 
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                finish(); // ThirdActivityを終了させる
+              //  finish(); // ThirdActivityを終了させる
 
             }
         });

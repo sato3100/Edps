@@ -3,6 +3,7 @@ package com.example.myedpsapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,12 +30,12 @@ public class FourthActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent FourthToFifthIntent = new Intent(FourthActivity.this, Rakuten.class);
+                Intent FourthToFifthIntent = new Intent(FourthActivity.this, Rakuten.class);//一時的にrakutenから変更
                 // 名前を渡す
                 startActivity(FourthToFifthIntent);
 
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
-                finish(); // FourthActivityを終了させる
+               // finish(); // FourthActivityを終了させる
 
             }
         });
