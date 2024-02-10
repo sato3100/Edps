@@ -55,9 +55,9 @@ public class SecondActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // データベース挿入成功時にThirdActivityへ遷移
 
-                        Intent secondToThirdIntent = new Intent(SecondActivity.this, ThirdActivity.class);
-                        secondToThirdIntent.putExtra("userName", name); // 名前を渡す
-                        startActivity(secondToThirdIntent);
+                        Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                        intent.putExtra("USER_ID", userId);
+                        startActivity(intent);
 
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
                         finish(); // SecondActivityを終了させる
