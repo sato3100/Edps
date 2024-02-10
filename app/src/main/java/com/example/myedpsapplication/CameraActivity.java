@@ -26,6 +26,9 @@ public class CameraActivity extends AppCompatActivity{
     ActivityResultLauncher<Intent> _cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallbackFromCamera());
     private Uri _imageUri;
 
+    Intent getTime = getIntent();
+    //int getTimeValue = getTime.getIntExtra(SixthActivity.TIME_DATA,1);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -85,6 +88,8 @@ public class CameraActivity extends AppCompatActivity{
 
                 Intent CameraToSeventhIntent = new Intent(CameraActivity.this, SeventhActivity.class);
 
+
+               //CameraToSeventhIntent.putExtra("TIME_DATA2",getTimeValue);
                 // 名前を渡す
                 startActivity(CameraToSeventhIntent);
 

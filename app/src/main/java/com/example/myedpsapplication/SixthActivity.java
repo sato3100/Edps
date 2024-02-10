@@ -57,9 +57,18 @@ public class SixthActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        Intent SixthToSeventhIntent = new Intent(SixthActivity.this, CameraActivity.class);
+                        int time = h*3600+m*60+s;//画面遷移で渡したいデータ
+
+
+
+                        Intent SixthToCameraIntent = new Intent(SixthActivity.this, CameraActivity.class);
                         // 名前を渡す
-                        startActivity(SixthToSeventhIntent);
+
+
+                        startActivity(SixthToCameraIntent);
+
+
+
 
                        // overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
                         finish(); // FourthActivityを終了させる

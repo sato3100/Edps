@@ -3,12 +3,14 @@ package com.example.myedpsapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SeventhActivity extends AppCompatActivity {
 
-    final String EXTRA2 = "[com.example.myedpsapplication].DATA";
+    Intent getTime = getIntent();
+
 
 
     @Override
@@ -16,9 +18,16 @@ public class SeventhActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tenth);
 
+       // int timeScore=getTimeValue;
+
+    //    TextView ScoreText = findViewById(R.id.evaluationText);
+   //     ScoreText.setText(timeScore);
+
         findViewById(R.id.eatStartButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
 
                 Intent SeventhToEighthIntent = new Intent(SeventhActivity.this, EighthActivity.class);
