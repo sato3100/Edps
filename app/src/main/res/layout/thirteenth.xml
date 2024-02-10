@@ -28,11 +28,12 @@
         android:layout_below="@+id/textView11"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
         android:layout_marginStart="64dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="64dp"
         android:contentDescription="@string/risu"
-        android:src="@drawable/baby2" />
+        android:src="@drawable/baby" />
 
     <View
         android:id="@+id/rectangle_2"
@@ -84,6 +85,16 @@
         android:layout_marginEnd="33dp"
         android:text="@string/ご飯が終わったらお皿を片付けよう"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/dirtyDish"
+        android:layout_width="146dp"
+        android:layout_height="295dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="181dp"
+        android:layout_marginBottom="43dp"
+        app:srcCompat="@drawable/dirtydish" />
 
 
 </RelativeLayout>

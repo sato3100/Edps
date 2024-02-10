@@ -25,10 +25,13 @@ public class CameraActivity extends AppCompatActivity{
 
     ActivityResultLauncher<Intent> _cameraLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallbackFromCamera());
     private Uri _imageUri;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eighth);
+
     }
 
 
@@ -81,6 +84,7 @@ public class CameraActivity extends AppCompatActivity{
 
 
                 Intent CameraToSeventhIntent = new Intent(CameraActivity.this, SeventhActivity.class);
+
                 // 名前を渡す
                 startActivity(CameraToSeventhIntent);
 

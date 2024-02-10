@@ -3,6 +3,7 @@ package com.example.myedpsapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,10 +23,14 @@ public class NinthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.twelfth);
+        Intent cameraIntent =getIntent();
+        String dish =cameraIntent.getStringExtra("EXTRA");
+
 
 
         tHandler = new Handler(getMainLooper());
         timer = new Timer();
+
 
         timer.schedule(new TimerTask() {
             @Override
@@ -43,6 +48,7 @@ public class NinthActivity extends AppCompatActivity {
                         //if(m==0 &&s==59){//本番環境(10分で遷移
                         if(m==9 &&s==10){//10秒で遷移
                             Intent intent = new Intent(NinthActivity.this, TenthActivity.class);
+
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                             startActivity(intent);
                             overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション

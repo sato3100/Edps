@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SeventhActivity extends AppCompatActivity {
 
+    final String EXTRA2 = "[com.example.myedpsapplication].DATA";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +20,9 @@ public class SeventhActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
                 Intent SeventhToEighthIntent = new Intent(SeventhActivity.this, EighthActivity.class);
+
                 // 名前を渡す
                 startActivity(SeventhToEighthIntent);
 
