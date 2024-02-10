@@ -5,6 +5,22 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <Button
+        android:id="@+id/cleanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/character_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#1D47C5"
+        android:text="片付けた！"
+        android:textColorHighlight="#2355D3"
+        android:textColorLink="#4272C3" />
+
     <ImageView
         android:id="@+id/character_image"
         android:layout_width="281dp"

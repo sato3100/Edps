@@ -18,8 +18,6 @@ import java.util.TimerTask;
 public class SixthActivity extends AppCompatActivity {
     private Handler  tHandler;
     private Timer timer;
-     long startTime = System.currentTimeMillis();
-     long nowTime;
      int h=0;
      int m=0;
      int s=0;

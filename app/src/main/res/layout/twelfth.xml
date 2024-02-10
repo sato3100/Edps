@@ -85,15 +85,15 @@
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="156dp"
-        android:layout_height="45dp"
+        android:id="@+id/eatTimer"
+        android:layout_width="329dp"
+        android:layout_height="66dp"
         android:layout_below="@+id/character_image"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="128dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="2dp"
         android:text="@string/残り時間"
         android:textSize="35sp" />
 
