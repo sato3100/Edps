@@ -3,16 +3,14 @@ package com.example.myedpsapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ThemedSpinnerAdapter;
-import android.view.View.OnClickListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -96,17 +94,7 @@ public class ThirdActivity extends AppCompatActivity {
                 textViewAge.setText("エラー: " + databaseError.getMessage());
             }
 
-
-
-
-
-
-
-
         });
-
-
-
     }
 }
 

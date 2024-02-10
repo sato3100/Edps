@@ -102,6 +102,7 @@ public class Rakuten extends AppCompatActivity {
 
 
 
+<<<<<<< HEAD
 
         findViewById(R.id.readyButton).setOnClickListener(new View.OnClickListener() {//食器ボタン押したときの処理
             @Override
@@ -116,6 +117,25 @@ public class Rakuten extends AppCompatActivity {
 
             }
         });
+=======
+                    Intent FifthToSixthIntent = new Intent(Rakuten.this, SixthActivity.class);
+                    // 名前を渡す
+                    startActivity(FifthToSixthIntent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                }
+            });
+
+            findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Rakuten.this, FourthActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(intent);
+
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
+                }
+            });
+>>>>>>> 81e32333ceabb8bdd02274c1b5514da6cee53673
 
         findViewById(R.id.ingredientBackButton).setOnClickListener(new View.OnClickListener() {
             @Override
