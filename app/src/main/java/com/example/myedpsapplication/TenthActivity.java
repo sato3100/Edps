@@ -32,7 +32,7 @@ public class TenthActivity extends AppCompatActivity {
                 dDishImg.startAnimation(dAnim);
                 dDishImg.setVisibility(View.INVISIBLE);
                 ImageView petImage = findViewById(R.id.character_image);
-                petImage.setImageResource(R.drawable.baby2);
+
 
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {
                     Intent intent = new Intent(TenthActivity.this, ThirdActivity.class);
@@ -42,6 +42,7 @@ public class TenthActivity extends AppCompatActivity {
 
 
                     },3200);
+                petImage.setImageResource(R.drawable.baby2);
 
                 //アクティビティスタック上の位置が保持される
 

@@ -1,8 +1,12 @@
 package com.example.myedpsapplication;
 
 import android.content.Intent;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnticipateOvershootInterpolator;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +20,7 @@ public class NinthActivity extends AppCompatActivity {
     private Handler tHandler;
     private Timer timer;
     int m=10;
-    int s=59;
+    int s=0;
 
 
     @Override
@@ -30,6 +34,12 @@ public class NinthActivity extends AppCompatActivity {
 
         tHandler = new Handler(getMainLooper());
         timer = new Timer();
+        ImageView dishImg = findViewById(R.id.eatenDishImg);
+        // dishImg.setImageResource();
+        ScaleAnimation dScale = new ScaleAnimation(1,10,1,10,0,0);
+        dScale.setDuration(600000);//10分 600000 ミリ秒
+        dScale.setInterpolator(new AnticipateOvershootInterpolator());
+        dishImg.startAnimation(dScale);
 
 
         timer.schedule(new TimerTask() {
@@ -38,15 +48,23 @@ public class NinthActivity extends AppCompatActivity {
                 tHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        s++;
-                        m-=s/60;
+                        s--;
+                        if(s<0){
+                            s=59;
+                            m--;
 
 
-                        s%=60;
+
+                        }
+
+
+
+
+
                         TextView time = findViewById(R.id.eatTimer);
-                        time.setText("残り："+m+"分"+(59-s)+"秒");
-                        //if(m==0 &&s==59){//本番環境(10分で遷移
-                        if(m==9 &&s==10){//10秒で遷移
+                        time.setText("残り："+m+"分"+s+"秒");
+                        //if(m==0 &&s==0){//本番環境(10分で遷移
+                        if(m==9 &&s==50){//10秒で遷移
                             Intent intent = new Intent(NinthActivity.this, TenthActivity.class);
 
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
