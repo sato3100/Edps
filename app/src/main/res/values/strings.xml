@@ -33,4 +33,7 @@
     <string name="baby">baby2</string>
     <string name="リスちゃん2">リスちゃん</string>
     <string name="baby3">baby</string>
+    <string name="食事中">食事中</string>
+    <string name="残り時間">残り:10分</string>
+    <string name="ご飯が終わったらお皿を片付けよう">ご飯が終わったらお皿を片付けよう！</string>
 </resources>
