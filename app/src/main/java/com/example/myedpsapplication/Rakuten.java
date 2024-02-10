@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +35,11 @@ public class Rakuten extends AppCompatActivity {
 
         RakutenRecipeApi api = retrofit.create(RakutenRecipeApi.class);
 
-        Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, "20"); // カテゴリIDを設定
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(29)+5; // 0から99までのランダムな数字
+        System.out.println("生成されたランダムな数字: " + randomNumber);
+
+        Call<RecipeResponse> call = api.getRecipes(APPLICATION_ID, String.valueOf(randomNumber)); // カテゴリIDを設定
 
         call.enqueue(new Callback<RecipeResponse>() {
             @Override
