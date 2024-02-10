@@ -2,9 +2,11 @@ package com.example.myedpsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,9 +56,12 @@ public class SecondActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         // データベース挿入成功時にThirdActivityへ遷移
+                        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putString("userId", userId);
+                        editor.apply();
 
                         Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-                        intent.putExtra("USER_ID", userId);
                         startActivity(intent);
 
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // スライドアニメーション
