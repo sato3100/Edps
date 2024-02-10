@@ -33,6 +33,25 @@
         tools:ignore="MissingConstraints"
         tools:text="家にある具材を入力して下さい" />
 
+    <EditText
+        android:id="@+id/editTextIngredient"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:autofillHints=""
+        android:hint="にんじん、りんご"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="MissingConstraints" />
+
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
@@ -53,14 +72,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="74dp"
         android:backgroundTint="#1D47C5"
-        android:text="準備完了"
+        android:text="レシピを検索"
         android:textColorHighlight="#2355D3"
         android:textColorLink="#4272C3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-         />
+        />
 
     <ImageView
         android:id="@+id/homeBackButton"
