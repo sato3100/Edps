@@ -3,23 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/readyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#1D47C5"
-        android:text="準備完了"
-        android:textColorHighlight="#2355D3"
-        android:textColorLink="#4272C3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.884" />
 
     <View
         android:id="@+id/view2"
@@ -31,62 +18,119 @@
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <ImageView
+        android:id="@+id/ingredientBackButton"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        android:contentDescription="@string/back_button_description"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
         android:text="@string/料理"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="497dp"
-        android:text="@string/作りたい料理を選択してください"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingredientBackButton" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="298dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/ingredientBackButton"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/ingredientBackButton"
-        android:layout_width="51dp"
+
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_above="@id/view2"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="125dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/readyButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="NotSibling">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <!-- ここにスクロールさせたいやつ入れていくぜーーーい -->
 
+            <!-- レシピ名1のTextView -->
+            <TextView
+                android:id="@+id/textViewRecipe1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="レシピ名1"
+                android:textSize="18sp"
+                android:layout_margin="8dp"
+                tools:ignore="MissingConstraints" />
 
+            <!-- レシピ1の画像を表示するImageView -->
+            <ImageView
+                android:id="@+id/imageViewRecipe1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:ignore="MissingConstraints" />
 
+            <!-- レシピ名2のTextView -->
+            <TextView
+                android:id="@+id/textViewRecipe2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="レシピ名2"
+                android:textSize="18sp"
+                android:layout_margin="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <!-- レシピ2の画像を表示するImageView -->
+            <ImageView
+                android:id="@+id/imageViewRecipe2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:ignore="MissingConstraints" />
+
+            <!-- レシピ名3のTextView -->
+            <TextView
+                android:id="@+id/textViewRecipe3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="レシピ名3"
+                android:textSize="18sp"
+                android:layout_margin="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <!-- レシピ3の画像を表示するImageView -->
+            <ImageView
+                android:id="@+id/imageViewRecipe3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                tools:srcCompat="@tools:sample/avatars"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/readyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#1D47C5"
+                android:text="準備完了"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

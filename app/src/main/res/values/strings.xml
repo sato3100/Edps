@@ -36,4 +36,5 @@
     <string name="食事中">食事中</string>
     <string name="残り時間">残り:10分</string>
     <string name="ご飯が終わったらお皿を片付けよう">ご飯が終わったらお皿を片付けよう！</string>
+    <string name="back_button_description">back_button_description</string>
 </resources>
