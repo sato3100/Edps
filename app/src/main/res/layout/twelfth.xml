@@ -5,16 +5,30 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/rectangle_2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="113dp"
+        android:text="食事中"
+        android:textSize="34sp" />
+
     <ImageView
         android:id="@+id/preeatingrisu_image"
         android:layout_width="281dp"
         android:layout_height="295dp"
-        android:layout_below="@+id/textView11"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="64dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="68dp"
         android:contentDescription="@string/risu"
         android:src="@drawable/preeatingrisu" />
 
@@ -32,18 +46,7 @@
         tools:text="10歳" />
 
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="152dp"
-        android:layout_height="73dp"
-        android:layout_below="@+id/rectangle_2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="109dp"
-        android:text="@string/食事中"
-        android:textSize="35sp" />
+
 
     <TextView
         android:id="@+id/textView13"
@@ -59,10 +62,10 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView14"
         android:layout_width="162dp"
         android:layout_height="72dp"
-        android:layout_below="@+id/rectangle_2"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="238dp"
@@ -75,7 +78,7 @@
         android:id="@+id/eatenDishImg"
         android:layout_width="145dp"
         android:layout_height="143dp"
-        android:layout_below="@+id/character_image"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"

@@ -56,8 +56,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2">
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,6 +68,12 @@
             android:padding="16dp">
 
             <!-- スクロールさせたい内容をここに入れます -->
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="レシピの特定に失敗しました" />
 
             <TextView
                 android:id="@+id/textViewRecipe1"
@@ -82,9 +90,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="8dp"
+                android:contentDescription="@string/todo4"
                 tools:ignore="MissingConstraints"
-                tools:srcCompat="@tools:sample/avatars"
-                android:contentDescription="@string/todo4" />
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/textViewRecipe2"
@@ -102,9 +110,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="8dp"
+                android:contentDescription="@string/todo5"
                 tools:ignore="MissingConstraints"
-                tools:srcCompat="@tools:sample/avatars"
-                android:contentDescription="@string/todo5" />
+                tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/textViewRecipe3"
@@ -121,9 +129,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="8dp"
+                android:contentDescription="@string/todo6"
                 tools:ignore="MissingConstraints"
-                tools:srcCompat="@tools:sample/avatars"
-                android:contentDescription="@string/todo6" />
+                tools:srcCompat="@tools:sample/avatars" />
 
             <Button
                 android:id="@+id/readyButton"

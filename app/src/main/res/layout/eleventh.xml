@@ -57,7 +57,6 @@
         android:textSize="24sp"
         tools:text="10歳" />
 
-
     <TextView
         android:id="@+id/textView11"
         android:layout_width="366dp"
