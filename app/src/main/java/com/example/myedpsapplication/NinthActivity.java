@@ -36,8 +36,8 @@ public class NinthActivity extends AppCompatActivity {
         timer = new Timer();
         ImageView dishImg = findViewById(R.id.eatenDishImg);
         // dishImg.setImageResource();
-        ScaleAnimation dScale = new ScaleAnimation(1,10,1,10,0,0);
-        dScale.setDuration(600000);//10分 600000 ミリ秒
+        ScaleAnimation dScale = new ScaleAnimation(1,0,1,0,0,0);
+        dScale.setDuration(10000);//10分 600000 ミリ秒  10秒 10000
         dScale.setInterpolator(new AnticipateOvershootInterpolator());
         dishImg.startAnimation(dScale);
 
