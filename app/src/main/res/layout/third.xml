@@ -66,9 +66,6 @@
         android:hapticFeedbackEnabled="true" />
 
 
-
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -76,9 +73,9 @@
         android:layout_alignTop="@id/view"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="-4dp"
-        android:text="料理を始めよう"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/料理を始めよう2"
         android:textSize="26sp" />
 
     <TextView
@@ -94,8 +91,9 @@
         android:layout_height="45dp"
         android:layout_alignTop="@id/view"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="27dp"
-        app:srcCompat="@drawable/cookingicon" />
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/cookingicon"
+        android:contentDescription="@string/todo3" />
 
 
 </RelativeLayout>

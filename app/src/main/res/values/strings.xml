@@ -37,4 +37,17 @@
     <string name="残り時間">残り:10分</string>
     <string name="ご飯が終わったらお皿を片付けよう">ご飯が終わったらお皿を片付けよう！</string>
     <string name="back_button_description">back_button_description</string>
+    <string name="にんじん">にんじん</string>
+    <string name="レシピを検索">レシピを検索</string>
+    <string name="todo2">TODO</string>
+    <string name="メインの食材">メインの食材</string>
+    <string name="料理を始めよう2">料理を始めよう</string>
+    <string name="todo3">TODO</string>
+    <string name="レシピ名1">レシピ名1</string>
+    <string name="todo4">TODO</string>
+    <string name="レシピ名2">レシピ名2</string>
+    <string name="todo5">TODO</string>
+    <string name="レシピ名3">レシピ名3</string>
+    <string name="todo6">TODO</string>
+    <string name="準備完了">準備完了</string>
 </resources>
