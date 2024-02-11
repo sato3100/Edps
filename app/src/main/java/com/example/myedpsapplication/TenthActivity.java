@@ -33,7 +33,6 @@ public class TenthActivity extends AppCompatActivity {
                 dDishImg.setVisibility(View.INVISIBLE);
                 ImageView petImage = findViewById(R.id.character_image);
 
-
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {
                     Intent intent = new Intent(TenthActivity.this, ThirdActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);

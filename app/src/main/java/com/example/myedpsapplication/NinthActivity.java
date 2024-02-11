@@ -53,13 +53,7 @@ public class NinthActivity extends AppCompatActivity {
                             s=59;
                             m--;
 
-
-
                         }
-
-
-
-
 
                         TextView time = findViewById(R.id.eatTimer);
                         time.setText("残り："+m+"分"+s+"秒");
