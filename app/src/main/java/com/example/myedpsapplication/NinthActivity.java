@@ -22,6 +22,8 @@ public class NinthActivity extends AppCompatActivity {
     int m=10;
     int s=0;
 
+    int i=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class NinthActivity extends AppCompatActivity {
         //dScale.setInterpolator(new AnticipateOvershootInterpolator());
         dishImg.startAnimation(dScale);
 
+        ImageView risuImg = findViewById(R.id.preeatingrisu_image);
+
 
         timer.schedule(new TimerTask() {
             @Override
@@ -48,13 +52,17 @@ public class NinthActivity extends AppCompatActivity {
                 tHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        s--;
+                        i++;
+                        if(i%2==0){
+                            s--;
+                            risuImg.setImageResource(R.drawable.eatingrisu);
+                        }else risuImg.setImageResource(R.drawable.preeatingrisu);
                         if(s<0){
                             s=59;
                             m--;
 
                         }
-
+                        ImageView risuImg = findViewById(R.id.preeatingrisu_image);
                         TextView time = findViewById(R.id.eatTimer);
                         time.setText("残り："+m+"分"+s+"秒");
                         //if(m==0 &&s==0){//本番環境(10分で遷移
@@ -68,7 +76,7 @@ public class NinthActivity extends AppCompatActivity {
                     }
 
                 });}
-        },0,1000);
+        },0,500);
 
 
 

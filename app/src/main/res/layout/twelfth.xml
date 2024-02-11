@@ -6,7 +6,7 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:id="@+id/character_image"
+        android:id="@+id/preeatingrisu_image"
         android:layout_width="281dp"
         android:layout_height="295dp"
         android:layout_below="@+id/textView11"
@@ -16,31 +16,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="64dp"
         android:contentDescription="@string/risu"
-        android:src="@drawable/baby2" />
-
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="328dp"
-        android:layout_height="57dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/rectangle_2"
-        android:elevation="4dp" />
-
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/rectangle_2"
-        android:layout_alignTop="@id/rectangle_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="10dp"
-        android:elevation="5dp"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        tools:text="リスくん" />
+        android:src="@drawable/preeatingrisu" />
 
     <TextView
         android:id="@+id/textViewAge"
@@ -58,16 +34,42 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="108dp"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="73dp"
         android:layout_below="@+id/rectangle_2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="150dp"
         android:layout_marginTop="83dp"
-        android:layout_marginEnd="152dp"
+        android:layout_marginEnd="109dp"
         android:text="@string/食事中"
         android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rectangle_2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="259dp"
+        android:text="10歳"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="162dp"
+        android:layout_height="72dp"
+        android:layout_below="@+id/rectangle_2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="238dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="11dp"
+        android:text="リスくん"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/eatenDishImg"
@@ -84,17 +86,17 @@
         android:contentDescription="@string/完成料理"
         app:srcCompat="@android:drawable/ic_menu_gallery" />
 
+
     <TextView
         android:id="@+id/eatTimer"
-        android:layout_width="329dp"
-        android:layout_height="66dp"
-        android:layout_below="@+id/character_image"
+        android:layout_width="311dp"
+        android:layout_height="168dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="2dp"
-        android:text="@string/残り時間"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="543dp"
+        android:layout_marginEnd="26dp"
+        android:text="残り時間：10分"
         android:textSize="35sp" />
 
 

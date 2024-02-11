@@ -5,6 +5,20 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/rectangle_2"
+        android:layout_alignTop="@id/rectangle_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="40dp"
+        android:elevation="5dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:text="リスくん" />
+
     <Button
         android:id="@+id/cleanButton"
         android:layout_width="wrap_content"
@@ -29,49 +43,25 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="61dp"
         android:contentDescription="@string/risu"
         android:src="@drawable/baby" />
 
-    <View
-        android:id="@+id/rectangle_2"
-        android:layout_width="328dp"
-        android:layout_height="57dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/rectangle_2"
-        android:elevation="4dp" />
-
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/rectangle_2"
-        android:layout_alignTop="@id/rectangle_2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="10dp"
-        android:elevation="5dp"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        tools:text="リスくん" />
 
     <TextView
         android:id="@+id/textViewAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/rectangle_2"
-        android:layout_marginStart="-176dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="-178dp"
+        android:layout_marginTop="40dp"
         android:layout_toEndOf="@id/textViewName"
         android:elevation="5dp"
         android:textColor="#000000"
         android:textSize="24sp"
         tools:text="10歳" />
-
 
     <TextView
         android:id="@+id/textView11"
@@ -80,9 +70,10 @@
         android:layout_below="@+id/rectangle_2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="33dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="44dp"
         android:text="@string/ご飯が終わったらお皿を片付けよう"
         android:textSize="30sp" />
 
@@ -92,8 +83,8 @@
         android:layout_height="295dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="181dp"
-        android:layout_marginBottom="43dp"
+        android:layout_marginStart="195dp"
+        android:layout_marginBottom="123dp"
         app:srcCompat="@drawable/dirtydish" />
 
 
